@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+
+html,
+body {
+	width: 100vw;
+	height: 100vh;
+	max-width: 100vw;
+	background: rgba(0, 0, 0, 0.5) url('./assets/images/background.jpg') no-repeat
+		center fixed;
+	background-size: cover;
+	position: relative;
+	font-family: 'Nunito', sans-serif;
+}
+
+div.loader-wrapper {
+	z-index: 10;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+div.social {
+	position: absolute;
+	opacity: 0.5;
+	display: flex;
+	width: 100%;
+	padding: 5px;
+}
+
+div.social :nth-child(2) {
+	margin-left: auto;
+}
+
+.isLoading {
+	opacity: 0.35;
+}
+
+div.wrapper {
+	position: absolute;
+	width: 60vw;
+	height: 80vh;
+	top: 10vh;
+	left: 20vw;
+	background: rgba(225, 225, 225, 0.25);
+}
+
+div.search-bar {
+	width: 100%;
+	height: 15%;
+	background: rgba(0, 0, 50, 0.3);
+	margin-top: 2%;
+}
+
+div.search-bar div {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 100%;
+}
+
+div.search-bar div h6 {
+	font: caption;
+	color: rgba(225, 225, 225, 0.8);
+}
+
+input[type='text'] {
+	background: none;
+	border: none;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+	color: rgba(225, 225, 225, 1);
+	font-size: x-large;
+	text-align: center;
+}
+
+input[type='text']:focus {
+	outline: none;
+	border-bottom: 2px solid rgba(225, 225, 225, 0.25);
+}
+
+div.display {
+	position: relative;
+	height: 60%;
+}
+
+div.display div.display-wrapper {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	top: 10%;
+	height: 80%;
+	width: 100%;
+	color: rgba(225, 225, 225, 1);
+}
+
+div.display div.weather-icon {
+	width: 100%;
+}
+
+div.weather-icon img {
+	width: 50%;
+	margin-left: 25%;
+}
+
+div.weather-decr {
+	display: flex;
+	flex-flow: column nowrap;
+	width: 100%;
+	height: 50%;
+}
+
+div.descr-1 {
+	flex-grow: 2;
+}
+
+div.descr-2 {
+	flex-grow: 1;
+	display: flex;
+	flex-flow: row nowrap;
+	background-color: rgba(0, 0, 50, 0.3);
+	width: 94%;
+	padding: 5px;
+	text-align: center;
+}
+
+h1.temp {
+	font-size: 5rem;
+}
+
+h1.temp sup {
+	font-size: 1.5rem;
+}
+
+div.descr-2 div {
+	width: 100%;
+}
+
+div.min-max {
+	margin-top: 5px;
+}
+
+div.min-max p {
+	margin-top: 12px;
+}
+
+div.descr-2 div img {
+	width: 35%;
+}
+
+div.days {
+	display: flex;
+	height: 21%;
+	width: 100%;
+	padding: 0 15px;
+}
+
+div.day-2,
+div.day-3,
+div.day-4,
+div.day-5,
+div.day-6,
+div.day-7 {
+	height: 100%;
+	width: 20%;
+	background: rgba(0, 0, 50, 0.3);
+	margin: 2px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	color: white;
+}
+
+div.img-wrapper {
+	width: 40%;
+	height: 40%;
+}
+
+div.img-wrapper img {
+	width: 80%;
+	margin: 10%;
+}
+
+/*  ================================================================ */
+
+@media only screen and (max-width: 768px) {
+	html,
+	body {
+		width: 100vw;
+		height: 100vh;
+	}
+
+	div.search-bar {
+		margin: 0;
+	}
+
+	div.search-bar div h6 {
+		font-size: 1.6rem;
+	}
+
+	div.display {
+		height: 36%;
+	}
+
+	div.wrapper {
+		width: 100vw;
+		left: 0;
+		height: 100%;
+		top: 0;
+	}
+
+	div.display div.display-wrapper {
+		top: 0;
+	}
+
+	div.weather-icon img {
+		width: 90%;
+	}
+
+	h1.temp {
+		font-size: 3.25rem;
+	}
+
+	div.days {
+		height: 50%;
+		flex-wrap: wrap;
+		flex-flow: column;
+		padding: 0;
+	}
+
+	div.day-2 {
+		height: 14%;
+		width: 100%;
+		flex-direction: row;
+		background: none;
+		margin: 0;
+	}
+
+	div.day-2:nth-child(odd) {
+		background: rgba(0, 0, 50, 0.3);
+	}
+
+	div.img-wrapper {
+		height: 100%;
+	}
+
+	div.img-wrapper img {
+		margin: 0;
+		height: 100%;
+		width: 90%;
+	}
+}
